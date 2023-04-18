@@ -2,20 +2,19 @@ const LOCAL_ROUTES = {};
 
 // Navegar a una ruta específica y actualizar el historial
 export const navigateTo = (pathname, updateHistory = true) => {
-  console.log(pathname);
-  console.log(LOCAL_ROUTES);
+  const newPath = path.replace("/prueba/", "");
 // Si no se encuentra la ruta, redirigir a la página de inicio
-  const path = LOCAL_ROUTES[pathname] && typeof LOCAL_ROUTES[pathname] !== 'function' ? pathname : '/';
+  const path = LOCAL_ROUTES[newPath] && typeof LOCAL_ROUTES[newPath] !== 'function' ? newPath : '/';
 
   // Actualizar el historial
   if (updateHistory) {
-    window.history.pushState({}, path, window.location.origin + pathname);
+    window.history.pushState({}, path, window.location.origin + newPath);
   }
 
   // Borra la sección raíz y renderiza el nuevo componente
   const rootSection = document.getElementById('root');
   rootSection.innerHTML = '';
-  rootSection.append(LOCAL_ROUTES[pathname]());
+  rootSection.append(LOCAL_ROUTES[newPath]());
 };
 
 // Inicializar el enrutador con las rutas

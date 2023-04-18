@@ -17830,15 +17830,14 @@ const initFirebase = () => {
 };
 const LOCAL_ROUTES = {};
 const navigateTo = (pathname, updateHistory = true) => {
-  console.log(pathname);
-  console.log(LOCAL_ROUTES);
-  const path = LOCAL_ROUTES[pathname] && typeof LOCAL_ROUTES[pathname] !== "function" ? pathname : "/";
+  const newPath = pathname.replace("/prueba/", "");
+  const path = LOCAL_ROUTES[newPath] && typeof LOCAL_ROUTES[newPath] !== "function" ? newPath : "/";
   if (updateHistory) {
-    window.history.pushState({}, path, window.location.origin + pathname);
+    window.history.pushState({}, path, window.location.origin + newPath);
   }
   const rootSection = document.getElementById("root");
   rootSection.innerHTML = "";
-  rootSection.append(LOCAL_ROUTES[pathname]());
+  rootSection.append(LOCAL_ROUTES[newPath]());
 };
 const initRouter = (routes) => {
   Object.keys(routes).reduce((currentRoutes, pathname) => {

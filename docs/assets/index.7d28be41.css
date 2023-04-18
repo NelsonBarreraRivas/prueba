@@ -11,7 +11,7 @@ html, body {
   background-color: #ADD8E6;
 }
 .others-background{
-  background-image: url("/assets/mar.b7df8aff.jpg");
+  background-image: url("/prueba/assets/mar.b7df8aff.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -287,7 +287,7 @@ h2{
     background-color: #ADD8E6;
   }
   .others-background{
-    background-image: url("/assets/fondoMar.3fcd21c9.jpeg");
+    background-image: url("/prueba/assets/fondoMar.3fcd21c9.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;

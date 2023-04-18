@@ -17867,8 +17867,8 @@ const mostrarVentanaRecuperarContrase\u00F1a = (email) => {
   const auth = getAuth();
   return sendPasswordResetEmail(auth, email);
 };
-const iconoNavegador = "/assets/iconoNavegador.5dc75f61.png";
-const logoPrincipal = "/assets/logoPrincipal.b869871e.png";
+const iconoNavegador = "/prueba/assets/iconoNavegador.5dc75f61.png";
+const logoPrincipal = "/prueba/assets/logoPrincipal.b869871e.png";
 const Register = () => {
   document.body.classList.add("others-background");
   document.body.classList.remove("home-background");
@@ -17907,9 +17907,9 @@ const Register = () => {
   });
   return div;
 };
-const logo = "/assets/logo.fb195676.png";
-const logo1 = "/assets/logo1.b2c6df31.png";
-const google = "/assets/google.d65d89c2.png";
+const logo = "/prueba/assets/logo.fb195676.png";
+const logo1 = "/prueba/assets/logo1.b2c6df31.png";
+const google = "/prueba/assets/google.d65d89c2.png";
 const Login = () => {
   document.body.classList.add("others-background");
   document.body.classList.remove("home-background");
@@ -17996,7 +17996,7 @@ const Login = () => {
   });
   return div;
 };
-const logOutIcon = "/assets/logOutIcon.6bcb2dd8.png";
+const logOutIcon = "/prueba/assets/logOutIcon.6bcb2dd8.png";
 const Home = () => {
   document.body.classList.add("home-background");
   document.body.classList.remove("others-background");

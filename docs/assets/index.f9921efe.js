@@ -17830,7 +17830,9 @@ const initFirebase = () => {
 };
 const LOCAL_ROUTES = {};
 const navigateTo = (pathname, updateHistory = true) => {
-  const path = typeof LOCAL_ROUTES[pathname] !== "function" ? pathname : "/";
+  console.log(pathname);
+  console.log(LOCAL_ROUTES);
+  const path = LOCAL_ROUTES[pathname] && typeof LOCAL_ROUTES[pathname] !== "function" ? pathname : "/";
   if (updateHistory) {
     window.history.pushState({}, path, window.location.origin + pathname);
   }

@@ -2,7 +2,13 @@ const LOCAL_ROUTES = {};
 
 // Navegar a una ruta específica y actualizar el historial
 export const navigateTo = (pathname, updateHistory = true) => {
-  const newPath = pathname.replace("/prueba/", "");
+
+  
+  console.log(pathname);
+  console.log(LOCAL_ROUTES);
+
+  const newPath = pathname.replace("/prueba", "");
+  console.log(newPath);
 // Si no se encuentra la ruta, redirigir a la página de inicio
   const path = LOCAL_ROUTES[newPath] && typeof LOCAL_ROUTES[newPath] !== 'function' ? newPath : '/';
 

@@ -14,7 +14,7 @@ export const navigateTo = (pathname, updateHistory = true) => {
 
   // Actualizar el historial
   if (updateHistory) {
-    window.history.pushState({}, path, window.location.origin + newPath);
+    window.history.pushState({}, path, window.location.origin + "/prueba" + newPath);
   }
 
   // Borra la sección raíz y renderiza el nuevo componente

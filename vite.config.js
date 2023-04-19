@@ -18,6 +18,7 @@ export default defineConfig(({ command }) => {
       // ejemplo base: '/social-network/',
       build: {
         minify: false,
+        assetsDir: "assets",
         rollupOptions: {
           output: {
             dir: './dist',

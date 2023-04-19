@@ -17834,9 +17834,9 @@ const navigateTo = (pathname, updateHistory = true) => {
   console.log(LOCAL_ROUTES);
   const newPath = pathname.replace("/prueba", "");
   console.log(newPath);
-  const path = LOCAL_ROUTES[newPath] && typeof LOCAL_ROUTES[newPath] !== "function" ? newPath : "/";
+  LOCAL_ROUTES[newPath] && typeof LOCAL_ROUTES[newPath] !== "function" ? newPath : "/";
   if (updateHistory) {
-    window.history.pushState({}, path, window.location.origin + newPath);
+    window.history.pushState(null, null, window.location.origin + "/prueba" + newPath);
   }
   const rootSection = document.getElementById("root");
   rootSection.innerHTML = "";
